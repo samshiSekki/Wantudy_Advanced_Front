@@ -30,7 +30,7 @@ let WantudyHeader : any = styled.header`
   justify-content : center;
   width: 100vw;
   height: 157px;
-  background-color: white;
+
   opacity: 1;
   z-index: 99;
 `;
