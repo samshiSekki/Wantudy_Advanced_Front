@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import kakaoIcon from '../../asset/login/icon-kakao.svg';
+import { KAKAO_AUTH_URL } from './OAuth2RedirectHandler';
 
 //const {Kakao} = window;
 
@@ -14,7 +15,7 @@ const KakaoLogin = () => {
     }
     return (
         <>
-        <LoginButton onClick={LoginKakao}/>
+        <LoginButton onClick={() => window.location.href= KAKAO_AUTH_URL}/>
         </>
     )
 }
