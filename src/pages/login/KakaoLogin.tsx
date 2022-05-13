@@ -15,7 +15,7 @@ const KakaoLogin = () => {
     }
     return (
         <>
-        <LoginButton onClick={() => window.location.href= KAKAO_AUTH_URL}/>
+        <LoginButton onClick={() => window.location.href=KAKAO_AUTH_URL}/>
         </>
     )
 }
