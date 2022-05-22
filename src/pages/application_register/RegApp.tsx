@@ -7,7 +7,7 @@ const RegApp = ()=>{
     const [attend, setAttend] = useState("재학");
   return (
     <>
-        <Header/>
+        <Header headerColor = {'white'}/>
         <Banner>
             <BannerText>
                 안녕하세요, OO님👋<br/>

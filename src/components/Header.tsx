@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from "styled-components";
 
-const Header = ()=>{
+const Header = (props: any)=>{
   return (
     <>
-      <WantudyHeader>
+      {
+        props.headerColor === 'white'
+        ?(<WantudyHeader>
         <HeaderContentContainer>
           <Logo src="img/header_assets/wantudy_logo.png"/>
           <MenuContainer>
@@ -12,14 +14,32 @@ const Header = ()=>{
             <Menu>스터디 개설</Menu>
             <Menu>스터디 관리</Menu>
           </MenuContainer>
-          
           <UserBtnContainer>
             <Menu>로그아웃</Menu>
             <BellIcon src="img/header_assets/bell_icon.png"/>
           </UserBtnContainer>
           <UserProfile/>
         </HeaderContentContainer>
+      </WantudyHeader>)
+
+        :(
+          <WantudyHeader>
+        <HeaderContentContainer>
+          <Logo src="img/header_assets/wantudy_logo_white.png"/>
+          <MenuContainer>
+            <Menu style={{color: 'white'}}>스터디 참여</Menu>
+            <Menu style={{color: 'white'}}>스터디 개설</Menu>
+            <Menu style={{color: 'white'}}>스터디 관리</Menu>
+          </MenuContainer>
+          <UserBtnContainer>
+            <Menu style={{color: 'white'}}>로그아웃</Menu>
+            <BellIcon src="img/header_assets/bell_icon.png"/>
+          </UserBtnContainer>
+          <UserProfile/>
+        </HeaderContentContainer>
       </WantudyHeader>
+        )
+      }
     </>
   )
 }
