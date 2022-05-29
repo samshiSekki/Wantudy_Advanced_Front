@@ -4,7 +4,8 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import RegApp from './pages/application_register/RegApp';
 import KakaoRedirectHandler from './pages/login/KakaoRedirectHandler';
-import { KAKAO_AUTH_URL } from './pages/login/OAuth2RedirectHandler';
+import { REDIRECT_URI } from './pages/login/OAuth2RedirectHandler';
+import GoogleRedirectHandle from './pages/login/GoogleRedirectHandle';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/regapp' element={<RegApp/>}/>
-        <Route path={KAKAO_AUTH_URL} element={<KakaoRedirectHandler/>} />
+        <Route path='/oauth/callback/kakao' element={<KakaoRedirectHandler/>} />
+        <Route path='/google/login' element={<GoogleRedirectHandle/>} />
         </Routes>
       </BrowserRouter>
     </div>

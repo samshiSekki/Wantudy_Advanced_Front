@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 const clientId = "531568810937-o2m49go1ft95qcl2r0n7tlqi3pc597uh.apps.googleusercontent.com";
+const redirectURI = 'http://localhost:3000/google/login'
 // 추후에 따로 빼야 함
 
 export default function GoogleButton(){
@@ -15,10 +16,16 @@ export default function GoogleButton(){
         email:"",
         name:""
       })
+      
 
     const loginWithGoogle = () => {
-        gapi.auth2.getAuthInstance().signIn();
-        navigate('/');
+        // gapi.auth2.getAuthInstance().signIn();
+        // navigate('/');
+        window.location.href ="https://accounts.google.com/o/oauth2/auth?" +
+            `client_id=${clientId}&`+
+            `redirect_uri=${redirectURI}&`+
+            "response_type=token&"+
+            "scope=https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile";
     }
 
     const logoutFromGoogle = () => {

@@ -8,7 +8,7 @@ const Login = () => {
     return (
         <Container>
             <img src={logoIcon}/>
-            <Title>{'원터디에 오신 것을\n환영합니다!'}</Title>
+            <Title>{'원터디에\n오신 것을 환영합니다!'}</Title>
             <Description>{'소셜 로그인으로 간단하게 원터디를 시작해볼까요?'}</Description>
             {/* <Input placeholder='아이디'/>
             <Input placeholder='비밀번호'/> */}
@@ -48,15 +48,6 @@ const Container = styled.div`
         margin-bottom: 50px;
         margin-right: 30px;
     }
-
-    & > p {
-        margin-top: 52px;
-        margin-bottom: 31px;
-        color: #FFFFFF;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 27px;
-    }
     padding-bottom: 181px;
 `;
 
@@ -66,6 +57,7 @@ const Title = styled.p`
     line-height: 58px;
     white-space: pre-line;
     text-align: center;
+    color: #FFFFFF;
 `;
 
 const Description = styled.p`
@@ -74,6 +66,7 @@ const Description = styled.p`
     line-height: 46px;
 
     color: #FFFFFF;
+    margin-bottom: 69px;
 `
 
 // const Input = styled.input`
@@ -138,4 +131,5 @@ const Button = styled.button`
 const SocialLogin = styled.div`
     display: flex;
     gap: 20px;
+    margin-bottom: 77px;
 `;

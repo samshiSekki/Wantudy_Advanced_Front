@@ -15,7 +15,7 @@ const KaKaoRedirectHandler = () => {
   const getToken = async () => {
     axios({
       method: "GET", // 해당 게시물에서는 back이 get으로 받았음
-      url: `http://3.35.208.142/oauth/callback/kakao?code=${code}`, // 백엔드 코드 ??
+      url: `http://localhost:8080/oauth/callback/kakao?code=${code}`, // 백엔드 코드 ??
     })
       .then((res) => {
         console.log(res); // 토큰이 넘어올 것임
