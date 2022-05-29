@@ -35,7 +35,8 @@ export default function GoogleButton(){
 
     return(
         <div>
-        <LoginButton onClick={loginWithGoogle}/>
+        <LoginButton onClick={loginWithGoogle}>
+            <img src={googleIcon}/> Google</LoginButton>
         {/* <button onClick={logoutFromGoogle}>
           logout from google
         </button> */}
@@ -44,13 +45,20 @@ export default function GoogleButton(){
 }
 
 const LoginButton = styled.button`
-    background-image: url(${googleIcon});
-    background-repeat: no-repeat;
-    width: 81px;
-    height: 81px;
-    border-radius: 50%;
-    background-size: contain;
-    border: none; 
+    width: 252px;
+    height: 100px;
+    background: #F4F4F4;
+    border-radius: 51px;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+
+    color: #616161;
+
+    display: flex;
+    align-items: center;
+    padding-left: 3 0px;
 `;
 
 

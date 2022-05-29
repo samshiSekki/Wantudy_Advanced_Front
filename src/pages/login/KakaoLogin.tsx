@@ -15,7 +15,9 @@ const KakaoLogin = () => {
     }
     return (
         <>
-        <LoginButton onClick={() => window.location.href=KAKAO_AUTH_URL}/>
+        <LoginButton onClick={() => window.location.href=KAKAO_AUTH_URL}>
+            <img src={kakaoIcon}/>Kakao
+            </LoginButton>
         </>
     )
 }
@@ -23,11 +25,18 @@ const KakaoLogin = () => {
 export default KakaoLogin;
 
 const LoginButton = styled.button`
-    background-image: url(${kakaoIcon});
-    background-repeat: no-repeat;
-    width: 81px;
-    height: 81px;
-    border-radius: 50%;
-    background-size: contain;
-    border: none; 
+    width: 252px;
+    height: 100px;
+    background: #FFEB00;
+    border-radius: 51px;
+
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 43px;
+
+    color: #3C1E1E;
+
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
 `;

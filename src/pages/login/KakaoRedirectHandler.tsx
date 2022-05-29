@@ -5,8 +5,8 @@ import qs from "qs";
 import { useNavigate } from "react-router-dom";
 
 const KaKaoRedirectHandler = () => {
-  const REDIRECT_URI = "http://localhost:3000/oauth/kakao/callback";
-  const CLIENT_SECRET = "zTgOV0pOBpNaZSP6JuLR7OGQ0aM2pPdJ";
+  // const REDIRECT_URI = "http://localhost:3000/oauth/kakao/callback";
+  // const CLIENT_SECRET = "zTgOV0pOBpNaZSP6JuLR7OGQ0aM2pPdJ";
   const navigate = useNavigate();
 
   // calllback으로 받은 인가코드
