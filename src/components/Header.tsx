@@ -45,7 +45,7 @@ const Header = (props: any)=>{
 }
 
 let WantudyHeader : any = styled.header`
-  position: fixed;
+  position: absolute;
   display: flex;
   justify-content : center;
   width: 100vw;
