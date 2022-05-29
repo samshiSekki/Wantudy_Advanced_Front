@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 
 const Header = (props: any)=>{
@@ -7,10 +8,12 @@ const Header = (props: any)=>{
       {
         props.headerColor === 'white'
         ?(<WantudyHeader>
-        <HeaderContentContainer>
+        <HeaderContentContainer backgroundColor='#FFFFFF'>
           <Logo src="img/header_assets/wantudy_logo.png"/>
           <MenuContainer>
-            <Menu>스터디 참여</Menu>
+            <Menu>
+              <Link to='/studyList'>스터디 참여</Link>
+              </Menu>
             <Menu>스터디 개설</Menu>
             <Menu>스터디 관리</Menu>
           </MenuContainer>
@@ -27,7 +30,9 @@ const Header = (props: any)=>{
         <HeaderContentContainer>
           <Logo src="img/header_assets/wantudy_logo_white.png"/>
           <MenuContainer>
-            <Menu style={{color: 'white'}}>스터디 참여</Menu>
+            <Menu style={{color: 'white'}}>
+              <Link to='/studyList'>스터디 참여</Link>
+            </Menu>
             <Menu style={{color: 'white'}}>스터디 개설</Menu>
             <Menu style={{color: 'white'}}>스터디 관리</Menu>
           </MenuContainer>
@@ -54,12 +59,13 @@ let WantudyHeader : any = styled.header`
   opacity: 1;
   z-index: 99;
 `;
-let HeaderContentContainer : any = styled.div`
+const HeaderContentContainer = styled.div<{backgroundColor?: string}>`
   display: flex;
   width: 1240px;
   height: 100%;
   align-items: center;
   -webkit-box-align: center;
+  background: ${props => props.backgroundColor};
 `;
 let Logo : any = styled.img`
   width: 369px;
@@ -67,7 +73,7 @@ let Logo : any = styled.img`
 `;
 let MenuContainer : any = styled.div`
   display: flex;
-  align-itmes: center;
+  align-items: center;
   justify-content: space-between;
   width: 450px;
   height: 27px;
